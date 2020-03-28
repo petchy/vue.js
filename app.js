@@ -18,6 +18,9 @@ new Vue({
       })
       this.newData.name = '';
       this.newData.salary = 0;
+    },
+    showMessage:function(){
+      console.log("Send data...");
     }
   },
   computed:{
@@ -26,6 +29,18 @@ new Vue({
         return value + Number(data.salary);
       }, 0);
       return summary;
+    },
+    average:function(){
+      var summary = this.employees.reduce(function(value, data) {
+        return value + Number(data.salary);
+      }, 0);
+      return summary/this.employees.length;
+    }
+  },
+  watch:{
+    //after salarySummary call showMessage
+    salarySummary:function(){
+      this.showMessage();
     }
   }
 })
