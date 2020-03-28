@@ -7,26 +7,8 @@
   </head>
   <body>
     <div id="vue-app">
-      Name : <input type="text" v-model="name"> Food Favourite : <input type="checkbox" value="ส้มตำ" v-model="foods"><label>ส้มตำ</label> <input type="checkbox" value="พิซซ่า" v-model="foods"><label>พิซซ่า</label> <input type="checkbox" value="ชาบู" v-model="foods"><label>ชาบู</label>
-      <br>
-      <input type="radio" value="Male" v-model="gender"><label>Male</label><br>
-      <input type="radio" value="Female" v-model="gender"><label>Female</label>
-      <br>
-      อาชีพ :
-      <select v-model="job">
-        <option disabled value="กรุณาเลือกอาชีพ">กรุณาเลือกอาชีพ</option>
-        <option value="โปรแกรมเมอร์">โปรแกรมเมอร์</option>
-        <option value="เชฟ">เชฟ</option>
-        <option value="เจ้าของร้านกาแฟ">เจ้าของร้านกาแฟ</option>
-      </select>
-      <hr>
-      <h1>Name : {{name}}</h1>
-      <h1>Job : {{job}}</h1>
-      <h1>Age : {{age}}</h1>
-      <h1>Website : <a v-bind:href="website">Click link...</a></h1>
-      <h1>Food : {{foods}}</h1>
-      <h1>Gender : {{gender}}</h1>
-
+      <button type="button" v-on:click="like=!like">Like</button>
+      <h1 v-if="like">สวัสดี</h1>
     </div>
     <script src="app.js" charset="utf-8"></script>
   </body>
