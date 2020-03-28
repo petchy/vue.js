@@ -1,15 +1,15 @@
-Vue.component('like', {
-  data: function(){
-    return{
-      count:0
+Vue.component('showview', {
+  props:{
+    title:{
+      type:String,
+      required:true
+    },
+    view:{
+      type:Number,
+      default:0
     }
   },
-  template:'<button type="button" v-on:click="count++">Click : {{ count }}</button>'
-});
-
-Vue.component('post', {
-  props:['title'],
-  template:'<h3>{{title}}</h3>'
+  template:'<h3>{{title}} | {{ view }}</h3>'
 });
 
 new Vue({
