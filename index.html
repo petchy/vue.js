@@ -7,13 +7,11 @@
   </head>
   <body>
     <div id="vue-app">
-      <button type="button" v-on:click="like=!like">Like</button>
-      <h1 v-if="like">สวัสดี</h1>
+      <span>Employee name : </span> <input type="text" v-model="newData.name"><br>
+      <span>Salary : </span> <input type="text" v-model="newData.salary"><br>
+      <button type="button" v-on:click="addEmployee">Add employee</button>
       <ul>
-        <li v-for="product in products">{{ product }}</li>
-      </ul>
-      <ul>
-        <li v-for="employee in employees">{{ employee.name }}, {{ employee.age }}</li>
+        <li v-for="employee in employees">{{ employee.name }} | {{ employee.salary }}</li>
       </ul>
     </div>
     <script src="app.js" charset="utf-8"></script>

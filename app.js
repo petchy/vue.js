@@ -1,13 +1,23 @@
 new Vue({
   el:"#vue-app",
   data:{
-    like:false,
-    products: ["Coffee", "Beer", "Coke"],
+    newData:{
+      name:"",
+      salary:0
+    },
     employees: [
-      {name: "Jesica", age: 20},
-      {name: "Peter", age: 25}
+      {name: "Jesica", salary: 20000},
+      {name: "Peter", salary: 25000}
     ]
   },
   methods:{
+    addEmployee:function(){
+      this.employees.push({
+        name: this.newData.name,
+        salary: this.newData.salary
+      })
+      this.newData.name = '';
+      this.newData.salary = 0;
+    }
   }
 })
