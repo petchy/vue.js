@@ -7,9 +7,11 @@
   </head>
   <body>
     <div id="vue-app">
-      <h1>{{setName('Petch Mater Chef')}}</h1>
-      <p>{{job}}</p>
-      <b>{{age}}</b>
+      <h1>Name : {{setName('Petch Mater Chef')}}</h1>
+      <h1>Job : {{job}}</h1>
+      <h1>Age : {{age}}</h1>
+      <h1>Website : <a v-bind:href="website">Click link...</a></h1>
+      <input type="text" v-bind:value="name">
     </div>
     <script src="app.js" charset="utf-8"></script>
   </body>

@@ -4,7 +4,8 @@ new Vue({
     name:"Petch Akkarapol",
     job:"Master Chef",
     age:34,
-    status:false
+    status:false,
+    website: "https://www.youtube.com"
   },
   methods:{
     getName:function(){
