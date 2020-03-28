@@ -13,6 +13,12 @@ new Vue({
     },
     setName:function(name){
       return this.name = name
+    },
+    addAge:function(){
+      console.log(++this.age)
+    },
+    subtrackAge:function(){
+      console.log(--this.age)
     }
   }
 })
