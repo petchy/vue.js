@@ -11,6 +11,14 @@
       <br>
       <input type="radio" value="Male" v-model="gender"><label>Male</label><br>
       <input type="radio" value="Female" v-model="gender"><label>Female</label>
+      <br>
+      อาชีพ :
+      <select v-model="job">
+        <option disabled value="กรุณาเลือกอาชีพ">กรุณาเลือกอาชีพ</option>
+        <option value="โปรแกรมเมอร์">โปรแกรมเมอร์</option>
+        <option value="เชฟ">เชฟ</option>
+        <option value="เจ้าของร้านกาแฟ">เจ้าของร้านกาแฟ</option>
+      </select>
       <hr>
       <h1>Name : {{name}}</h1>
       <h1>Job : {{job}}</h1>
