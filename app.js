@@ -5,7 +5,8 @@ new Vue({
     job:"Master Chef",
     age:34,
     status:false,
-    website: "https://www.youtube.com"
+    website: "https://www.youtube.com",
+    count:0
   },
   methods:{
     getName:function(){
@@ -19,6 +20,9 @@ new Vue({
     },
     subtrackAge:function(){
       console.log(--this.age)
+    },
+    addCount:function(){
+      console.log(this.count++)
     }
   }
 })
