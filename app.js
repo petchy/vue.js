@@ -5,5 +5,13 @@ new Vue({
     job:"Master Chef",
     age:34,
     status:false
+  },
+  methods:{
+    getName:function(){
+      return this.name
+    },
+    setName:function(name){
+      return this.name = name
+    }
   }
 })
