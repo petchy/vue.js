@@ -6,7 +6,8 @@ new Vue({
     age:34,
     status:false,
     website: "https://www.youtube.com",
-    count:0
+    count:0,
+    foods:[]
   },
   methods:{
     getName:function(){
