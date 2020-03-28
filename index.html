@@ -7,14 +7,26 @@
   </head>
   <body>
     <div id="vue-app">
-      <ul>
-        <li v-for="comment in comments"
-        v-bind:key="comment"
-        is="showcomment"
-        v-bind:commentpost="comment"></li>
-      </ul>
-      <input type="text" v-model="newComment" v-on:keyup.enter="addComment">
+      <food-app>
+        <h2>อาหารอีสาน</h2>
+        <ul>
+          <li>ส้มตำ</li>
+          <li>ลาบ</li>
+        </ul>
+      </food-app>
+      <food-app>
+          <h2>อาหารใต้</h2>
+          <ul>
+            <li>แกงเหลือง</li>
+            <li>แกงไตปลา</li>
+          </ul>
+        </food-app>
     </div>
+    <template id="foodarea">
+      <div id="food">
+        <slot></slot>
+      </div>
+    </template>
     <script src="app.js" charset="utf-8"></script>
   </body>
 </html>
