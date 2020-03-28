@@ -7,12 +7,12 @@
   </head>
   <body>
     <div id="vue-app">
-      <span>Employee name : </span> <input type="text" v-model="newData.name"><br>
-      <span>Salary : </span> <input type="text" v-model="newData.salary"><br>
-      <button type="button" v-on:click="addEmployee">Add employee</button>
+      <span>Employee name : </span> <input type="text" v-model="newData.name"> <span>Salary : </span> <input type="text" v-model="newData.salary"><br>
+      <button type="button" @click="addEmployee">Add employee</button>
       <ul>
         <li v-for="employee in employees">{{ employee.name }} | {{ employee.salary }}</li>
       </ul>
+      <h1>Salary Summary: {{ salarySummary }}</h1>
     </div>
     <script src="app.js" charset="utf-8"></script>
   </body>

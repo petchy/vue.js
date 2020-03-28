@@ -19,5 +19,13 @@ new Vue({
       this.newData.name = '';
       this.newData.salary = 0;
     }
+  },
+  computed:{
+    salarySummary:function(){
+      var summary = this.employees.reduce(function(value, data) {
+        return value + Number(data.salary);
+      }, 0);
+      return summary;
+    }
   }
 })
