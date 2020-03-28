@@ -7,14 +7,12 @@
   </head>
   <body>
     <div id="vue-app">
-      <h1>Name : {{setName('Petch Mater Chef')}}</h1>
+      Name : <input type="text" v-model="name">
+      <hr>
+      <h1>Name : {{name}}</h1>
       <h1>Job : {{job}}</h1>
       <h1>Age : {{age}}</h1>
       <h1>Website : <a v-bind:href="website">Click link...</a></h1>
-      <input type="text" v-on:keyup.enter="addCount" v-bind:value="count">
-      <input type="text" v-bind:value="name"><br><br>
-      <button type="button" v-on:click="addAge">Add</button>
-      <button type="button" v-on:click="subtrackAge">Subtrack</button>
     </div>
     <script src="app.js" charset="utf-8"></script>
   </body>
