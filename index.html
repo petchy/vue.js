@@ -7,8 +7,13 @@
   </head>
   <body>
     <div id="vue-app">
-      <showview title="Vue.js tutorial" v-bind:view=5000></showview>
-      <showview title="PHP"></showview>
+      <ul>
+        <li v-for="comment in comments"
+        v-bind:key="comment"
+        is="showcomment"
+        v-bind:commentpost="comment"></li>
+      </ul>
+      <input type="text" v-model="newComment" v-on:keyup.enter="addComment">
     </div>
     <script src="app.js" charset="utf-8"></script>
   </body>
