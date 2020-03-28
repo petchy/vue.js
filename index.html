@@ -6,14 +6,16 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   </head>
   <body>
-    <div id="vue-app">
-      <span>Employee name : </span> <input type="text" v-model="newData.name"> <span>Salary : </span> <input type="text" v-model="newData.salary"><br>
-      <button type="button" @click="addEmployee">Add employee</button>
-      <ul>
-        <li v-for="employee in employees">{{ employee.name }} | {{ employee.salary }}</li>
-      </ul>
-      <h1>Salary Summary: {{ salarySummary }}</h1>
-      <h1>Average Summary: {{ average }}</h1>
+    <div id="post">
+      Title: {{ title }}<br>
+      Message: {{ message }}
+    </div>
+    <div id="comment">
+      <textarea>{{ comment }}</textarea>
+    </div>
+    <div id="likeSystem">
+      <button type="button" v-on:click="like=!like">Like</button>
+      {{ like }}
     </div>
     <script src="app.js" charset="utf-8"></script>
   </body>
